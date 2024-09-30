@@ -230,7 +230,7 @@ Synatx: git pull origin main
 - It is an event that takes place when git is unable to automatically resolve differences in code.
 - In this condition, we have to manually resolve the conflict.
 
-- VS code provides some options to resolve these Conflicts:
+- VS code provides some options to resolve these conflicts:
 1. Accept current change: accept the change of current branch.
 2. Accept incoming change: accept the change of other branch.
 3. Accept both changes: Both changes on separate lines.
