@@ -1,10 +1,10 @@
-• Version Control System (VCS) 
-- It is a tool that helps to track changes in our code. 
+• Version Control System (VCS)
+- It is a tool that helps to track changes in our code.
 - It is like the statement of our bank account.
 - We have all the details about the transactions of our bank account in that statement.
 - Similarly, we have a VCS for our projects.
 - It keeps track of the complete history of our projects.
-- e.g. - When a new file is added or deleted, when we updated a line or deleted it in our code.
+- e.g. - When a new file is added or deleted, when we updated or deleted a line in our code.
 
 • Git
 - It is one of the most popular VCS in the world. 
@@ -27,9 +27,9 @@
     - Git helps us to solve these problems easily.
 
 • Github
-- It is a website that allows devolopers to store and manage their code using git.
-- Devolopers can upload their code on this website.
-- If we change our code on our system then we can reflect those changes directly to our git.
+- It is a website that allows developers to store and manage their code using git.
+- Developers can upload their code on this website.
+- If we change our code on our system then we can reflect those changes directly to our github.
 - We upload our code on Github in the form of folders.
 - These folders are called 'repositories' (repos).
 
