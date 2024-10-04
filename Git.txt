@@ -56,13 +56,16 @@
 - By configuring git, we provide git with our details like username and email ID.
 - So that, we can tell the git to which account we have to make changes.
 - And git can associate our username with the changes that we make.
+Syntax: git config --global user.name "sansita0704"
+        git config --global user.email "sansita7406@gmail.com"
+        git config --list (to check the username and email)
 
 - There are two types of configuration:
 1. Global: All projects will be changed through one account.
 2. Local: Some specific repos or projects will be changed through an account.
 
 - Tilde (~) symbol represents the root or primary directory of our system.
-- We writing git in VS Code because we want our project and git to run parallely and together.
+- We write git in VS Code because we want our project and git to run parallely and together.
 
 - There are two kinds of repo:
 
