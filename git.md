@@ -1,0 +1,381 @@
+# Version Control System (VCS)
+
+-   It is a tool that helps to track changes in our code.
+-   It is like the statement of our bank account.
+-   We have all the details about the transactions of our bank account in that statement.
+-   Similarly, we have a VCS for our projects.
+-   It keeps track of the complete history of our projects.
+-   e.g. - When a new file is added or deleted, when we updated or deleted a line in our code.
+
+# Git
+
+-   It is one of the most popular VCS in the world.
+-   It is free and open source.
+-   It is fast and scalable.
+-   It is like a software that runs on our system.
+
+## Uses of Git
+
+### 1. Keeps track of history of our projects:
+
+-   This is required whenever we need to revert to previous versions of our project if needed.
+-   Maybe because we added a new feature in our project but it is not working fine or we are getting so many errors.
+-   So, we need to revert to previous version of our project.
+-   This can be easily done using Git.
+
+### 2. Collaborate:
+
+-   It helps to track what changes are done by which developer.
+-   It prevents overwriting of the code.
+-   This means if more than 1 developer are working on same file then which code should be accepted for that file.
+-   Git helps us to solve these problems easily.
+
+# Github
+
+-   It is a website that allows developers to store and manage their code using git.
+-   Developers can upload their code on this website.
+-   If we change our code on our system then we can reflect those changes directly to our github.
+-   We upload our code on Github in the form of folders.
+-   These folders are called 'repositories' (repos).
+
+-   md or mark down files are files which are written using Markdown syntax.
+-   Markdown is a markup language just like HTML which allows us to format text in a simple way.
+
+# Commit
+
+-   We commit changes in git.
+-   Simply, commit means to take screenshot of the change and save it in memory.
+-   Commit records all the changes made to our file and includes a message describing what those changes are.
+-   This is how git tracks changes of our code.
+-   Commit means confirmation of the change.
+
+-   **In Git, it occurs in two steps:**
+
+1. **Add:** We add our change.
+2. **Commit:** We confirm our change.
+
+-   **In Github, it occurs in one step only i.e. Commit.**
+-   We directly commit our change.
+
+-   In Github, in front of each file, we see our latest commit made to that file.
+
+# Configuring Git (Set up Git)
+
+-   By configuring git, we provide git with our details like username and email ID.
+-   So that, we can tell the git to which account we have to make changes.
+-   And git can associate our username with the changes that we make.
+
+    ```
+    git config --global user.name "sansita0704"
+    git config --global user.email "sansita7406@gmail.com"
+    git config --list (to check the username and email)
+    ```
+
+## There are two types of configuration:
+
+1. **Global:** All projects will be changed through one account.
+2. **Local:** Some specific repos or projects will be changed through an account.
+
+-   Tilde (~) symbol represents the root or primary directory of our system.
+-   We write git in VS Code because we want our project and git to run parallely and together.
+
+## There are two kinds of repo:
+
+1. **Local:** The repo that exists on our local machine (laptop or PC).
+2. **Remote:** The repo that is uploaded on github website.
+
+# Basic Terminal Commands
+
+-   **cd:** Change Directory
+
+    ```
+    cd <-directory name->
+    ```
+
+-   **ls:** List Files
+
+    -   lists all the files and directories which are not hidden.
+
+-   **ls -a:** lists all the files (hidden + not hidden)
+    -   '-a' stands for all.
+    -   If a repo contains .git hidden folder, this means it is a git repo.
+-   **mkdir:** make directory.
+
+# Git Commands
+
+## 1. Clone
+
+-   To clone or duplicate a repo from our github onto our local machine.
+
+```
+git clone <- URL ->
+```
+
+## 2. Status
+
+-   Displays status of our code.
+
+```
+git status
+```
+
+-   If the code on our github and on our laptop are exactly same then it displays that we are up to date.
+
+## There can be four types of status:
+
+### 1. Untracked
+
+-   If we create a new file on our local computer, then it will show an **untracked file** i.e. git is not able to track one file.
+-   Even if we modify that file, then also it will show untracked file.
+
+### 2. Modified
+
+-   When we change the code on our local computer, the code on our local computer and on github becomes different.
+-   So, it will show that one **modified file**.
+
+### 3. Staged
+
+-   When a modified file and an untracked file is added then they are called **staged files**.
+-   They are ready to be committed.
+
+### 4. Unmodified
+
+-   When staged files are committed, then they are called **unmodified files**.
+-   So, now all the screenshots of the changes are taken.
+
+## Summary
+
+    modified (changed) / untracked (new) file
+                        |
+                    staged (added)
+                        |
+                unmodified (committed)
+
+## 3. Add
+
+-   Moves or adds untracked or modified files from our working directory to the git staging area.
+
+```
+git add <- file name ->
+git add . # to add all the files.
+```
+
+-   **Git staging area** is like a space between our working directory and our repo.
+-   Here, we add changes before committing them.
+
+## 4. Commit
+
+-   It is the record of the change.
+
+    ```
+    git commit -m "Message"
+    ```
+
+-   **Your branch is ahead of 'origin/main' by 1 commit** - This means that our local computer is ahead of our github by 1 commit.
+-   This is b/z that commit is not done in github.
+-   It is only done in our local system.
+-   And this 1 commit consists of: changes in 2 files (index.html and readme.md)
+
+## 5. Push
+
+-   Upload local repo content to remote repo i.e. pushes our code from local computer to github.
+
+```
+git push origin main
+```
+
+-   Here, git push is our basic command through which we push our code.
+-   **origin**: name of the repo in our Github, which we cloned on our local computer.
+
+-   We can give it any name but its a convention to give it name 'origin'.
+-   **main** is a branch in which origin repo is present.
+-   So, we are pushing our code in the main branch of our 'origin' github or remote repo.
+
+```
+git push -u origin main
+```
+
+-   We can use -u flag with git push command to set upstream of our project.
+
+-   To tell git that we will push all the code to origin main only so that we do not have to mention it again and again.
+
+## 6. Pull
+
+-   Used to fetch and download content from a remote repo and immediately update the local repo to match the content.
+
+```
+git pull origin main
+```
+
+## • Workflow
+
+-   Make repo on github.
+-   Clone it on our system using clone command.
+-   Add readme file.
+-   Check the status of the files using status command.
+-   Add and commit files on our local system.
+-   Then push the updated code to github.
+
+If we make our project firstly on our local system and then move it to github then we will use below commands:
+
+## 7. Init
+
+-   Used to create a new git repo.
+
+```
+git init
+```
+
+-   'Git Repo' is a repo which is managed by git and all git commands can be applied on it.
+-   To create a git repo, we need to initialize a repo as a git repo using git init command.
+-   Without this, we cannot use any of the git commands on that repo.
+
+-   So, first we made a new directory using mkdir command.
+-   Till now, it is not a git repo b/z it does not have a .git folder.
+-   We can verify it using ls -a command.
+-   So, we initialized it as a git repo using init command.
+-   Created two files, added and committed them.
+
+## 8. git remote add origin <- link ->
+
+-   It is used to link our local git repo with our remote repo.
+-   git remote add: We are adding a new remote repo (We are adding a reference or link to an already existing remote repo, we are not creating a new remote repo).
+-   We are doing this, so that our local repo know where to send push updates.
+
+-   **origin**: telling git to call that remote repo by the name origin.
+-   We can give any name but it's a convention to give it origin name.
+-   link: provide link of that remote repo.
+
+## 9. git remote --v
+
+-   To verify the remote repo (which repo is set to origin).
+
+## 10. git branch
+
+-   To check in which branch we are in.
+
+## 11. git log:
+
+-   To see all our commits.
+
+# Git Branches
+
+-   If more than 1 team is working on the same project, then each team makes a separate copy of the project that are called **Branches**.
+-   So, there is a separate branch for separate tasks.
+-   This is similar to a tree where we have one main branch and then several branches are coming out of it.
+
+## Benefits
+
+-   **Parallel work:** Multiple developers can work on different branches independently. So, they do not have to wait for each-other.
+-   **Feature-based development:** Each feature can be developed in its own branch and can be merged into main branch when it's completed.
+
+-   Main branch is called **master** or **main**.
+
+## Branch Commands
+
+### 1. git branch:
+
+-   to check branch and list all the branches.
+
+### 2. git branch -M <- new name ->:
+
+-   to rename branch.
+
+### 3. git checkout <- branch name where we want to go ->:
+
+-   to navigate from one branch to another. (just as we checkout from a hotel)
+
+### 4. git checkout -b <- new branch name ->:
+
+-   to create a new branch.
+
+### 5. git branch -d <- branch name ->:
+
+-   to delete a branch.
+
+-   If we delete the branch in which we are currently in, then it will show an error.
+-   It is always required to be in a different branch in order to delete the other branch.
+
+-   When we are on 'feature1' branch and then if we do some changes in index.html, then those changes will be done in feature1 branch only.
+-   When we will come back to main branch, then we will not see those changes.
+
+## Merge Branch
+
+-   It means to merge the code of the branches with the code of the main branch.
+
+### 1. Through git
+
+```
+git diff <- branch name ->
+```
+
+-   To compare commits, branches, files, etc.
+-   Our feature1 branch is ahead of main branch (+1).
+
+```
+git merge <- branch name ->
+```
+
+-   To merge 2 branches.
+
+### 2. PR: Pull Request
+
+-   When we want to merge different branches to main, then we create a **pull request**.
+-   This PR is reviewed by a person to check if we not adding something wrong.
+-   Then, if the PR gets accepted then our branches get merged.
+-   The commit for merge is also there. Because it is also a change whose screenshot has to be taken.
+
+-   Using PR, branches get merged on github not on our local computer.
+-   To reflect those changes on our system also, we use pull command.
+
+## Merge Conflicts:
+
+-   When same line in same file has two different code in two branches then git is unable to decide which code should be accepted.
+-   These are called **Merge Conflicts**.
+-   It is an event that takes place when git is unable to automatically resolve differences in code.
+-   In this condition, we have to manually resolve the conflict.
+
+### VS code provides some options to resolve these conflicts:
+
+1. **Accept current change:** accept the change of current branch.
+
+2. **Accept incoming change:** accept the change of other branch.
+
+3. **Accept both changes:** Both changes on separate lines.
+
+# Undoing Changes
+
+## Case 1: Staged Changes (added not committed)
+
+    git reset <- file name ->: To undo the changes in a particular file.
+    git reset: To undo the changes in all the files.
+
+-   So, those changes will get unstaged.
+
+## Case 2: Committed Changes (for one commit)
+
+    git reset HEAD~1
+
+-   All our commits are stored internally in git.
+-   The latest commit of our project is called **HEAD**.
+-   By writing above command, we are telling git to reset HEAD by one step i.e. undo the last commit.
+-   This way, the second last commit will become HEAD (latest commit) and our last commit will be deleted.
+-   This way our change will come in unstaged state.
+
+## Case 3: Committed Changes (for many commits)
+
+    git reset <- commit hash ->
+    git reset --hard <- commit hash -> # Remove all the changes from our files also.
+
+-   Every commit has a unique hash or code associated with it.
+-   We write the hash of that commit whom we want to make head.
+-   This way all commits will go in state of unstaged but they will be present in our files.
+
+# Fork
+
+-   It is like a rough copy of our original repo.
+-   It is a new repo that shares code with the original "upstream" repo.
+
+-   We can make it on our github account.
+-   In this way, a copy of the repo will be created in our account and then we can do changes in it.
+-   Then, we can create PR to merge our copy to the original repo.
