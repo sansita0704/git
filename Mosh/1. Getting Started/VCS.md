@@ -29,6 +29,8 @@
 -   So, the clone of repo does not exists in their local comp.
 -   **e.g.** - Subversion, Microsoft Team Foundation Server.
 
+![Centralized VCS](Screenshots/1.%20CVCS.png)
+
 -   **Problem:** If this central server goes offline, we cannot collaborate or save snapshots of our project.
 -   So, we have to wait until the server comes online.
 
@@ -39,10 +41,9 @@
 -   Then, we push the changes to remote repo.
 -   Here, there is no problem of central server getting offline.
 -   If it does go offline, we can synchronize our work directly with others.
-
 -   **e.g.** - Git, Mercury
 
-<br>
+![Distributed VCS](Screenshots/2.%20DVCS.png)
 
 # Git
 
@@ -60,7 +61,9 @@ Out of all VCS, git is the most popular VCS b/z it is:
 
 -   It is the fastest and the easiest way.
 -   We can open a terminal or cmd prompt window to execute git commands.
--   **Note:** Go to Screenshots folder to see how we can create colorful terminal window like that of mosh.
+-   **Note:** Use below software to have a colorful terminal window like that of mosh:
+
+![Colorful Terminal Window](Screenshots/For%20colorful%20terminal.png)
 
 **It's Importance:**
 
@@ -120,8 +123,13 @@ git config --global core.editor "code --wait"
 git config --global -e
 ```
 
+<br>
+
 -   **Carriage Return** (CR): \r
 -   **Line Feed** (LF): \n
+
+![Line ending](Screenshots/3.%20CRLF.png)
+
 -   On Windows, end of line is marked with 2 special characters "\r\n" CRLF.
 -   On macOS and linux, end of line is marked with LF.
 -   If we do not handle end of lines properly, we can have some major issues.
@@ -133,7 +141,7 @@ git config --global -e
 -   For mac user, it should be set to input.
 -   So, the code stored in remote repo has LF for line ending no matter which user pulls or pushes the code.
 
-<br>
+![Use of core.autocrlf property](Screenshots/4.%20core.autocrlf.png)
 
 | Setting | When Committing (Pushing) | When Checking Out (Pulling)        |
 | ------- | ------------------------- | ---------------------------------- |
@@ -146,8 +154,6 @@ git config --global -e
 ```
 git config --global core.autocrlf input
 ```
-
-<br>
 
 # Getting Help
 
