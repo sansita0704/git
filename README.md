@@ -16,3 +16,7 @@ This repository contains well-organized notes I made while learning Git from two
 -   Resolving merge conflicts
 -   Common Git commands & shortcuts
 -   Real-world workflow best practices
+
+##
+
+> Made with ❤️ by [Sansita Jain](mailto:sansita7406@gmail.com)
